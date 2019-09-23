@@ -1,6 +1,8 @@
-require('dotenv').config();
-
 const env = process.env.NODE_ENV;
+
+if (env === 'production') {
+  require('dotenv').config();
+}
 
 const common = {
   PORT: process.env.PORT || 8082,
